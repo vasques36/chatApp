@@ -41,7 +41,7 @@ func main() {
 	go r.run()
 
 	// start the web server
-	log.Println("Starting web server on", *addr)
+	log.Println("Listening", *addr)
 	if err := http.ListenAndServe(*addr, nil); err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
